@@ -1,18 +1,112 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Unit-4-Game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Unit-4-Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </head>
+<!-- ### Option One: CrystalsCollector Game (Recommended)
+
+![Crystal Collector](Images/1-CrystalCollector.jpg)
+
+1. [Watch the demo](homework_demos/crystalsCollector_demo.mp4).
+
+2. The player will have to guess the answer, just like in Word Guess. This time, though, the player will guess with numbers instead of letters. 
+
+3. Here's how the app works:
+
+   * There will be four crystals displayed as buttons on the page.
+
+   * The player will be shown a random number at the start of the game.
+
+   * When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
+
+     * Your game will hide this amount until the player clicks a crystal.
+     * When they do click one, update the player's score counter.
+
+   * The player wins if their total score matches the random number from the beginning of the game.
+
+   * The player loses if their score goes above the random number.
+
+   * The game restarts whenever the player wins or loses.
+
+     * When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
+
+   * The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
+
+##### Option 1 Game design notes
+
+* The random number shown at the start of the game should be between 19 - 120.
+
+* Each crystal should have a random hidden value between 1 - 12. -->
 
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-12">
+        <h1 align="center">Crystal Collector!</h1>
+      </div>
 
-    <script type="text/javascript" src="assets/javascript/game.js"></script>       
+      <div class="col-6 col-md-12" align="center">
+        <h4>Game Instructions</h4>
+
+        <ol>
+          <li>You will be given a random number at the start of the game.</li>
+          <li>There are four crystals below.</li>
+          <br>
+          <ul>
+            <li id="diamond">Diamond</li>
+            <li id="sapphire">Sapphire</li>
+            <li id="emerald">Emerald</li>
+            <li id="ruby">Ruby</li>
+          </ul>
+          <br>
+          <li>By clicking on a crystal you will add a specific amount of points to your total score.</li>
+          <li>You win the game by matching your total score to random number</li>
+          <li>You lost the game if your total score goes above the random number.</li>
+          <li>The value of each crystal is hidden from you until you click on it.</li>
+          <li>Each time when the game starts, the game will change the value of each crystal.</li>
+
+      </div>
+
+      <div class="container">
+        <div class="row" align="center">
+          <div class="col-6 col-md-4 randomNumber">
+            <h2>Random Number</h2>
+          </div>
+          <div class="col-6 col-md-4 winsLosses">
+            <h2>Wins: <span id="totalWins"></span></h2>
+            <br>
+            <h2>Loss: <span id="totalLoss"></span> </h2>
+          </div>
+          <div class="col-6 col-md-4 userTotal">
+            <h2>Your Total Score: <span id="finalScore"></span></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-12" align="center">
+
+            <div class="crystals">
+              <img id="one" src="assets/images/diamond.jpeg" alt="picture of diamond" class="img-thumbnail">
+              <img id="two" src="assets/images/sapphire.jpeg" alt="picture of sapphire" class="img-thumbnail">
+              <img id="third" src="assets/images/emerald1.jpeg" alt="picture of emerald" class="img-thumbnail">
+              <img id="fourth" src="assets/images/ruby.jpeg" alt="picture of ruby" class="img-thumbnail">
+            </div>
+
+          </div>
+        </div>
+      </div>
 
 </body>
 
