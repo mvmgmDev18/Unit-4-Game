@@ -135,3 +135,4 @@ $(document).ready(function() {
         }
     }); 
 });
+// &copy; Copyright 2018 Michael Sayson
