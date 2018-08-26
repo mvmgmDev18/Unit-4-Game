@@ -6,4 +6,24 @@ body {
     background-image: url(../images/diamond-upholstery.png);
     
   }
-  
+
+#randomNumber {
+    color: white;
+}  
+
+#totalWins {
+    
+    color: blue;
+
+}
+
+#totalLoss {
+    color: red;
+}
+
+#finalScore {
+    color: black;
+}
+
+
+
